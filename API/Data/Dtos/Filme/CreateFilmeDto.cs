@@ -2,12 +2,8 @@
 
 namespace FilmesAPI.Data.Dtos
 {
-    public class LendoFilmeDto
+    public class CreateFilmeDto
     {
-        [Key]
-        [Required]
-        public int Id { get; set; }
-        [Required]
         public string Titulo { get; set; }
         [Required]
         public string Diretor { get; set; }
@@ -15,6 +11,6 @@ namespace FilmesAPI.Data.Dtos
         public string Genero { get; set; }
         [Range(1, 200)]
         public double Duracao { get; set; }
-        public DateTime HoraDaConsulta { get; set; }
+        public int ClassificacaoEtaria { get; set; }
     }
 }

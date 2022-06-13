@@ -2,7 +2,7 @@
 
 namespace FilmesAPI.Data.Dtos
 {
-    public class CriarFilmeDto
+    public class UpdateFilmeDto
     {
         public string Titulo { get; set; }
         [Required]
