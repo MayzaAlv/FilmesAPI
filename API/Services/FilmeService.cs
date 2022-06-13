@@ -29,7 +29,7 @@ namespace FilmesAPI.Services
             return _mapper.Map<ReadFilmeDto>(filmeDto);
         }
 
-        public ReadFilmeDto MostrarFilme(int? classificacaoEtaria)
+        public List<ReadFilmeDto> MostrarFilme(int? classificacaoEtaria)
         {
             List<Filme> filmes;
             if (classificacaoEtaria == null)
@@ -44,8 +44,7 @@ namespace FilmesAPI.Services
 
             if (filmes != null)
             {
-                List<ReadFilmeDto> readDto = _mapper.Map<List<ReadFilmeDto>>(filmes);
-                return _mapper.Map<ReadFilmeDto> (readDto);
+                return _mapper.Map<List<ReadFilmeDto>>(filmes);
             }
             return null;
         }

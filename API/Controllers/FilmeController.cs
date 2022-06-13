@@ -30,7 +30,7 @@ namespace FilmesAPI.Controllers
         [HttpGet]
         public IActionResult MostrarFilme([FromQuery] int? classificacaoEtaria = null)
         {
-            ReadFilmeDto readDto = _filmeService.MostrarFilme(classificacaoEtaria);
+            List<ReadFilmeDto> readDto = _filmeService.MostrarFilme(classificacaoEtaria);
             if(readDto == null)
             {
                 return NotFound();

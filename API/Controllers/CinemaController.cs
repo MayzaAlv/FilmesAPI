@@ -31,7 +31,7 @@ namespace FilmesAPI.Controllers
         [HttpGet]
         public IActionResult MostrarCinemas([FromQuery] string nomeDoFilme)
         {
-            ReadCinemaDto readDto = _cinemaService.MostrarCinemas(nomeDoFilme);
+            List<ReadCinemaDto> readDto = _cinemaService.MostrarCinemas(nomeDoFilme);
 
             if (readDto == null)
             {

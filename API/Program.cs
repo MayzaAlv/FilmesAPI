@@ -22,6 +22,7 @@ builder.Services.AddScoped<EnderecoService, EnderecoService>();
 builder.Services.AddScoped<FilmeService, FilmeService>();
 builder.Services.AddScoped<SessaoService, SessaoService>();
 builder.Services.AddScoped<GerenteService, GerenteService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

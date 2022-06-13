@@ -26,7 +26,7 @@ namespace FilmesAPI.Services
             return _mapper.Map<ReadCinemaDto>(cinema);
         }
 
-        public ReadCinemaDto MostrarCinemas(string nomeDoFilme)
+        public List<ReadCinemaDto> MostrarCinemas(string nomeDoFilme)
         {
             List<Cinema> cinemas = _context.Cinemas.ToList();
             if (cinemas.Count == null)
@@ -47,8 +47,7 @@ namespace FilmesAPI.Services
                 return null;
             }
 
-            List<ReadCinemaDto> readDto = _mapper.Map<List<ReadCinemaDto>>(cinemas);
-            return _mapper.Map<ReadCinemaDto>(readDto);
+            return _mapper.Map<List<ReadCinemaDto>>(cinemas);
         }
 
         public ReadCinemaDto MostrarCinemaPorId(int id)
@@ -56,8 +55,7 @@ namespace FilmesAPI.Services
             Cinema cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
             if (cinema != null)
             {
-                ReadCinemaDto cinemaDto = _mapper.Map<ReadCinemaDto>(cinema);
-                return cinemaDto;
+                return _mapper.Map<ReadCinemaDto>(cinema);
             }
             return null;
         }
